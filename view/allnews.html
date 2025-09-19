@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">All News - SportsVartha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/allnews.css">
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 dark:bg-gray-800">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/0d9488/ffffff?text=SV" alt="SportsVartha Logo" class="rounded-lg">
+                <span class="text-2xl font-bold text-gray-800 dark:text-gray-200">SportsVartha</span>
+            </div>
+            <div class="md:flex items-center space-x-6 hidden">
+                <a href="homepage.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium">Home</a>
+                <a href="allnews.html?name=football" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium">Football</a>
+                <a href="allnews.html?name=cricket" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium">Cricket</a>
+                <a href="allnews.html?name=chess" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium">Chess</a>
+                <a href="allnews.html" class="text-green-600 font-medium">All News</a>
+            </div>
+            <div class="md:flex items-center space-x-4 hidden">
+                <div class="relative">
+                    <button id="settings-button" class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-green-600">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
+                            <path d="M19.016 13.918c-.08-.43-.243-.84-.486-1.22l-.99-1.5c.08-.12.155-.25.228-.38l.99-1.5c.243-.38.406-.79.486-1.22.08-.43.12-.86.12-1.31v-.02c0-.43-.04-.86-.12-1.29-.08-.43-.243-.84-.486-1.22l-1.01-1.52c-.07-.1-.13-.2-.2-.3-.06-.1-.1-.2-.14-.29-.04-.1-.08-.19-.11-.29-.03-.1-.06-.2-.08-.3-.02-.1-.04-.2-.06-.3-.02-.1-.04-.2-.05-.3h-.01c-.13-.43-.31-.83-.55-1.19-.24-.36-.53-.69-.87-.96l-1.5-1c-.34-.27-.49-.72-.66-1.14-.17-.42-.29-.87-.36-1.34-.07-.47-.1-.94-.1-1.45zM12 2c-.43 0-.86.04-1.29.12-.43.08-.84.24-1.22.49L7.99 3.99c-.12.08-.25.15-.38.23l-1.5.99c-.38.24-.79.4-1.22.48-.43.08-.86.12-1.31.12h-.02c-.43 0-.86-.04-1.29-.12-.43-.08-.84-.24-1.22-.49l-1.52-1.01c-.1-.07-.2-.13-.3-.2-.1-.06-.2-.1-.29-.14-.1-.04-.19-.08-.29-.11-.1-.03-.2-.06-.3-.08-.1-.02-.2-.04-.3-.06-.1-.02-.2-.04-.3-.05h-.01c-.43-.13-.83-.31-1.19-.55-.36-.24-.69-.53-.96-.87l-1-1.5c-.27-.34-.49-.72-.66-1.14-.17-.42-.29-.87-.36-1.34-.07-.47-.1-.94-.1-1.45zm2 17c.43 0 .86-.04 1.29-.12.43-.08.84-.24 1.22-.49l1.5-1c.38-.24.79-.4 1.22-.48.43-.08.86-.12 1.31-.12h.02c.43 0 .86.04 1.29.12.43.08.84.24 1.22.49l1.52 1.01c.1.07.2.13.3.2.1.06.2.1.29.14.1.04.19.08.29.11.1.03.2.06.3.08.1.02.2.04.3.06.1.02.2.04.3.05h.01c.13.43.31.83.55 1.19.24.36.53.69.87.96l1.5 1c.34.27.72.49 1.14.66.42.17.87.29 1.34.36.47.07.94.1.45.1zm-4-3a2 2 0 100-4 2 2 0 000 4z"></path>
+                        </svg>
+                    </button>
+                    <div id="settings-dropdown" class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg hidden">
+                        <div class="py-2">
+                            <label class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300">
+                                <input type="checkbox" id="theme-toggle" class="mr-2">
+                                Dark Mode
+                            </label>
+                            <hr class="border-gray-200 dark:border-gray-700">
+                            <select id="language-selector" class="w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 bg-transparent focus:outline-none">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="hi">हिंदी</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button class="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors">Subscribe</button>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-button" class="text-gray-600 dark:text-gray-400 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg py-4">
+            <div class="flex flex-col items-start px-4 space-y-2">
+                <a href="homepage.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium w-full py-2">Home</a>
+                <a href="allnews.html?sport=football" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium w-full py-2">Football</a>
+                <a href="allnews.html?sport=cricket" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium w-full py-2">Cricket</a>
+                <a href="allnews.html?sport=chess" class="text-gray-600 dark:text-gray-400 hover:text-green-600 font-medium w-full py-2">Chess</a>
+                <a href="allnews.html" class="text-green-600 font-medium w-full py-2">All News</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 id="news-heading" class="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">All News</h1>
+
+        <section id="filter-section" class="mb-8">
+            <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                <div class="flex-1">
+                    <label for="sport-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Filter by Sport</label>
+                    <select id="sport-filter" class="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="all">All Sports</option>
+                        <option value="football">Football</option>
+                        <option value="cricket">Cricket</option>
+                        <option value="chess">Chess</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="league-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Filter by League</label>
+                    <select id="league-filter" class="w-full px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="all">All Leagues</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <p class="text-center text-gray-500 dark:text-gray-400 col-span-full">Loading news...</p>
+            </div>
+            <div id="load-more-btn-container" class="flex justify-center mt-8">
+                <button class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors hidden">Load More</button>
+            </div>
+        </section>
+  <div class="bg-white p-6 rounded-lg shadow-md text-center border border-gray-200 mt-4">
+    <p class="text-sm font-semibold text-gray-500">Advertisement</p>
+    <div id="ad-container" class="bg-gray-100 p-8 rounded-md text-gray-400">
+        <p class="text-lg">Place Your Ad Code Here</p>
+    </div>
+</div>
+
+</section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="flex flex-col items-start">
+                <div class="flex items-center mb-4">
+                    <img src="https://placehold.co/40x40/0d9488/ffffff?text=SV" alt="SportsVartha Logo" class="rounded-lg">
+                    <span class="text-2xl font-bold ml-2 text-white">SportsVartha</span>
+                </div>
+                <p class="text-sm text-gray-400">Your ultimate source for sports news, analysis, and highlights from around the world.</p>
+            </div>
+            <div class="col-span-1 md:col-span-2 flex flex-col sm:flex-row justify-around gap-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="allnews.html?sport=football" class="hover:text-white">Football</a></li>
+                        <li><a href="allnews.html?sport=cricket" class="hover:text-white">Cricket</a></li>
+                        <li><a href="allnews.html?sport=chess" class="hover:text-white">Chess</a></li>
+                        <li><a href="allnews.html" class="hover:text-white">All Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-2">Follow Us</h4>
+                <div class="flex space-x-4 mb-4">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.185 8.441 9.878v-7.054H8.083V12h2.358v-1.6c0-2.31 1.378-3.585 3.489-3.585 1.011 0 1.956.179 2.227.258V6.95c-.328-.04-1.493-.19-2.857-.19-2.825 0-4.757 1.72-4.757 4.908V12h3.587v2.824H12v7.054c4.786-.693 8.441-4.862 8.441-9.878 0-5.523-4.477-10-10-10z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Twitter">
+                            <path d="M22.25 6.07c-.77.34-1.6.56-2.47.66.89-.53 1.57-1.37 1.89-2.38-.84.5-1.77.86-2.76 1.06C18.15 4.75 16.92 4 15.54 4c-2.34 0-4.25 1.91-4.25 4.25 0 .33.04.66.12.97C8.1 9.17 5.17 7.5 3.1 4.75c-.34.58-.53 1.25-.53 1.98 0 1.47.75 2.76 1.89 3.52-.7-.02-1.36-.2-1.93-.53v.05c0 2.06 1.47 3.77 3.42 4.15-.36.1-.74.15-1.14.15-.28 0-.55-.03-.81-.08.54 1.69 2.11 2.92 3.97 2.95C10.15 17.5 8.58 18.25 7 18.25c-.27 0-.54-.01-.8-.05 1.57.99 3.44 1.56 5.38 1.56 6.44 0 9.95-5.34 9.95-9.95 0-.15-.01-.3-.01-.45.69-.5 1.29-1.12 1.77-1.83z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram">
+                            <path d="M12 2c2.716 0 3.056.012 4.124.06c.995.048 1.637.208 2.218.428.584.226 1.018.528 1.453.963.435.435.737.87.963 1.453.22.581.38 1.223.428 2.218.048 1.068.06 1.408.06 4.124s-.012 3.056-.06 4.124c-.048.995-.208 1.637-.428 2.218-.226.584-.528 1.018-.963 1.453-.435.435-.737-.87-.963-1.453-.22-.581-.38-1.223-.428-2.218-.048-1.068-.06-1.408-.06-4.124s.012-3.056.06-4.124c.048-.995.208-1.637.428-2.218.226-.584.528-1.018.963-1.453.435-.435.87-.737 1.453-.963.581-.22 1.223-.38 2.218-.428C8.944 2.012 9.284 2 12 2zm0 2c-2.656 0-2.952.01-3.992.058-.934.045-1.488.195-1.928.376-.442.18-.787.41-.976.599-.189.189-.419.534-.599.976-.18.44-.33.994-.376 1.928-.048 1.04-.058 1.336-.058 3.992s.01 2.952.058 3.992c.045.934.195 1.488.376 1.928.18.44.41.787.599.976.189.189.534.419.976.599.44.18.994.33 1.928.376 1.04.048 1.336.058 3.992.058s2.952-.01 3.992-.058c.934-.045 1.488-.195 1.928-.376-.442-.18-.787-.41-.976-.599-.189-.189-.534-.419-.976-.599-.44-.18-.994-.33-1.928-.376-1.04-.048-1.336-.058-3.992-.058z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn">
+                            <path d="M19.78 19.78h-3.41v-7.14c0-.77-.01-1.76-.11-2.63-.1-.88-.5-1.61-1.32-2.18-.82-.57-1.74-.86-2.96-.86-1.12 0-2.07.24-2.85.73-.78.49-1.36 1.14-1.76 1.95-.4.81-.62 1.83-.62 3.06v5.07h-3.41V9.92h3.27v1.54h.05c.44-.67 1.07-1.22 1.89-1.66.82-.44 1.76-.66 2.79-.66 2.96 0 4.86 1.86 4.86 5.8v7.41zM5.59 7.74c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72zM3.92 9.92h3.39v9.86H3.92z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <h4 class="text-white font-semibold mb-2">Newsletter</h4>
+                <p class="text-sm text-gray-400 mb-4">Get the latest news directly to your inbox.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-full focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-800 dark:text-white dark:bg-gray-700 dark:border-gray-600">
+                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-r-full font-semibold hover:bg-green-700 transition-colors">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 text-center text-sm text-gray-500 border-t border-gray-700 pt-8">
+            <p>&copy; 2025 SportsVartha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const settingsButton = document.getElementById('settings-button');
+            const settingsDropdown = document.getElementById('settings-dropdown');
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const themeToggle = document.getElementById('theme-toggle');
+            const newsContainer = document.getElementById('news-container');
+            const newsHeading = document.getElementById('news-heading');
+            const pageTitle = document.getElementById('page-title');
+            const sportFilter = document.getElementById('sport-filter');
+            const leagueFilter = document.getElementById('league-filter');
+            const loadMoreButton = document.querySelector('#load-more-btn-container button');
+
+            settingsButton.addEventListener('click', () => {
+                settingsDropdown.classList.toggle('hidden');
+            });
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                themeToggle.checked = true;
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+
+            themeToggle.addEventListener('change', (event) => {
+                if (event.target.checked) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                }
+            });
+
+            const blogId = '9203313027406187559'; 
+            const apiKey = 'AIzaSyBnyzGyLe1p8GuxG9m6CsB0PUtMAfSMqZs';
+
+            let currentSport = 'all';
+            let currentLeague = 'all';
+            let nextPageToken = null;
+
+            const leaguesBySport = {
+                'all': ['All Leagues'],
+                'football': ['Premier League', 'La Liga', 'Serie A', 'Bundesliga'],
+                'cricket': ['IPL', 'Big Bash League', 'T20 World Cup'],
+                'chess': ['FIDE World Championship', 'Candidates Tournament'],
+            };
+
+            const updateLeagueFilter = (sport) => {
+                leagueFilter.innerHTML = '<option value="all">All Leagues</option>';
+                const leagues = leaguesBySport[sport] || [];
+                leagues.forEach(league => {
+                    const option = document.createElement('option');
+                    option.value = league.replace(/\s+/g, '-').toLowerCase();
+                    option.textContent = league;
+                    leagueFilter.appendChild(option);
+                });
+            };
+
+            const renderNews = (posts, append = false) => {
+                if (!append) {
+                    newsContainer.innerHTML = '';
+                }
+
+                if (posts && posts.length > 0) {
+                    posts.forEach(post => {
+                        const postImage = post.images && post.images.length > 0 ? post.images[0].url : 'https://placehold.co/400x250/10b981/ffffff?text=SportsVartha';
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = post.content;
+                        const postSummary = tempDiv.textContent.substring(0, 150) + '...';
+                        
+                        const postElement = document.createElement('div');
+                        postElement.className = 'flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
+                        postElement.innerHTML = `
+                            <a href="readnews.html?id=${post.id}" class="block">
+                                <img src="${postImage}" alt="${post.title}" class="w-full h-48 object-cover rounded-xl mb-4">
+                                <div>
+                                    <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 transition-colors">${post.title}</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">${postSummary}</p>
+                                </div>
+                            </a>
+                        `;
+                        newsContainer.appendChild(postElement);
+                    });
+                } else if (!append) {
+                    newsContainer.innerHTML = '<p class="text-center text-gray-500 dark:text-gray-400 col-span-full">No news found for this selection.</p>';
+                }
+            };
+
+            const fetchNews = async (append = false) => {
+               let apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=9&fields=items(id,title,url,images,content),nextPageToken&fetchImages=true`;
+                
+                const queryParams = [];
+                if (currentSport !== 'all') {
+                    queryParams.push(`labels=${currentSport}`);
+                }
+                if (currentLeague !== 'all') {
+                    queryParams.push(`q=${currentLeague.replace(/-/g, '+')}`);
+                }
+
+                if (queryParams.length > 0) {
+                    apiUrl += `&${queryParams.join('&')}`;
+                }
+                
+                if (append && nextPageToken) {
+                    apiUrl += `&pageToken=${nextPageToken}`;
+                }
+
+                if (!append) {
+                    newsContainer.innerHTML = '<p class="text-center text-gray-500 dark:text-gray-400 col-span-full">Loading news...</p>';
+                }
+
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    
+                    nextPageToken = data.nextPageToken || null;
+                    if (nextPageToken) {
+                        loadMoreButton.classList.remove('hidden');
+                    } else {
+                        loadMoreButton.classList.add('hidden');
+                    }
+                    
+                    renderNews(data.items, append);
+                } catch (error) {
+                    console.error('Error fetching news:', error);
+                    newsContainer.innerHTML = '<p class="text-center text-red-500 dark:text-red-400 col-span-full">Failed to load news. Please try again later.</p>';
+                    loadMoreButton.classList.add('hidden');
+                }
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialSport = urlParams.get('sport');
+
+            if (initialSport) {
+                currentSport = initialSport;
+                sportFilter.value = initialSport;
+                const displaySportName = initialSport.charAt(0).toUpperCase() + initialSport.slice(1);
+                newsHeading.textContent = `${displaySportName} News`;
+                pageTitle.textContent = `${displaySportName} News - SportsVartha`;
+            }
+
+            sportFilter.addEventListener('change', (e) => {
+                currentSport = e.target.value;
+                currentLeague = 'all';
+                updateLeagueFilter(currentSport);
+                const displaySportName = currentSport.charAt(0).toUpperCase() + currentSport.slice(1);
+                newsHeading.textContent = currentSport === 'all' ? 'All News' : `${displaySportName} News`;
+                pageTitle.textContent = currentSport === 'all' ? 'All News - SportsVartha' : `${displaySportName} News - SportsVartha`;
+                fetchNews();
+            });
+
+            leagueFilter.addEventListener('change', (e) => {
+                currentLeague = e.target.value;
+                fetchNews();
+            });
+
+            loadMoreButton.addEventListener('click', () => {
+                fetchNews(true);
+            });
+
+            updateLeagueFilter(currentSport);
+            fetchNews();
+        });
+    </script>
+</body>
+</html>
