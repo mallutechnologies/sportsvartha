@@ -770,7 +770,7 @@
 
                         featuredArticleContainer.innerHTML = `
                             <img src="${heroImage}" alt="${heroTitle}" class="w-full h-full object-cover">
-                            <a href="readnews.html?id=${featuredPost.id}" class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
+                            <a href="view/readnews.html?id=${featuredPost.id}" class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
                                 <div class="flex items-center space-x-2 text-sm font-medium mb-2">
                                     <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">${heroCategory.toUpperCase()}</span>
                                     <span>${publishedDate}</span>
@@ -787,7 +787,7 @@
                             const postPublishedTime = post.published ? `${Math.floor((new Date() - new Date(post.published)) / 60000)} minutes ago` : '';
 
                             const postElement = document.createElement('a');
-                            postElement.href = `readnews.html?id=${post.id}`;
+                            postElement.href = `view/readnews.html?id=${post.id}`;
                             postElement.className = 'flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-100 transition-colors';
                             postElement.innerHTML = `
                                 <img src="${postImage}" alt="${postAuthorName}" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
