@@ -626,7 +626,7 @@
                                 const postElement = document.createElement('div');
                                 postElement.className = 'flex flex-col bg-white rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
                                 postElement.innerHTML = `
-                                    <a href="readnews.html?id=${postId}" class="block">
+                                    <a href="view/readnews.html?id=${postId}" class="block">
                                         <img src="${postImage}" alt="${postTitle}" class="w-full h-36 object-cover rounded-xl mb-4">
                                         <div>
                                             <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 transition-colors">${postTitle}</h4>
@@ -667,7 +667,7 @@
                                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-8">
                                     <div class="text-white">
                                         <h3 class="text-3xl md:text-5xl font-bold mb-2">${heroTitle}</h3>
-                                        <a href="views/readnews.html?id=${heroId}" class="text-lg text-gray-200 hover:text-green-400 transition-colors">Read More...</a>
+                                        <a href="view/readnews.html?id=${heroId}" class="text-lg text-gray-200 hover:text-green-400 transition-colors">Read More...</a>
                                     </div>
                                 </div>
                             `;
@@ -677,7 +677,7 @@
                                 const postTitle = post.title;
                                 const postId = post.id;
                                 const postElement = document.createElement('a');
-                                postElement.href = `readnews.html?id=${postId}`;
+                                postElement.href = `view/readnews.html?id=${postId}`;
                                 postElement.className = 'bg-white dark:bg-gray-800 rounded-lg p-3 text-center transition-transform transform hover:scale-105 shadow-md';
                                 postElement.innerHTML = `
                                     <img src="${postImage}" alt="${postTitle}" class="w-12 h-12 rounded-full mx-auto mb-2 object-cover">
@@ -694,7 +694,7 @@
                                 const postElement = document.createElement('div');
                                 postElement.className = 'flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
                                 postElement.innerHTML = `
-                                    <a href="readnews.html?id=${postId}" class="block">
+                                    <a href="view/readnews.html?id=${postId}" class="block">
                                         <img src="${postImage}" alt="${postTitle}" class="w-full h-36 object-cover rounded-xl mb-4">
                                         <div>
                                             <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 transition-colors">${postTitle}</h4>
@@ -710,7 +710,7 @@
                                 const postTitle = post.title;
                                 const postId = post.id;
                                 const postElement = document.createElement('a');
-                                postElement.href = `readnews.html?id=${postId}`;
+                                postElement.href = `view/readnews.html?id=${postId}`;
                                 postElement.className = 'flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-md transition-colors';
                                 postElement.innerHTML = `
                                     <img src="${postImage}" alt="${postTitle}" class="w-16 h-16 object-cover rounded-md mr-4">
