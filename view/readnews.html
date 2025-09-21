@@ -82,6 +82,12 @@
             <p>Advertisement</p>
             <p class="text-sm mt-1">Place your Google AdSense code here.</p>
         </div>
+
+        <div class="mt-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col md:flex-row items-center justify-between transition-colors duration-300">
+    <span class="font-bold text-gray-800 dark:text-gray-200 text-lg mb-4 md:mb-0">Share this article:</span>
+    <div id="share-buttons" class="flex space-x-4">
+        </div>
+</div>
         </main>
 
     <footer class="bg-gray-900 text-gray-300 py-12 mt-8">
@@ -250,6 +256,150 @@
             
             fetchPost();
         });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const settingsButton = document.getElementById('settings-button');
+        const settingsDropdown = document.getElementById('settings-dropdown');
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const themeToggle = document.getElementById('theme-toggle');
+        const articleTitle = document.getElementById('article-title');
+        const articleContainer = document.getElementById('article-container');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const shareButtonsContainer = document.getElementById('share-buttons');
+
+        settingsButton.addEventListener('click', () => {
+            settingsDropdown.classList.toggle('hidden');
+        });
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggle.checked = true;
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            }
+        });
+
+        const blogId = '9203313027406187559';
+        const apiKey = 'AIzaSyBnyzGyLe1p8GuxG9m6CsB0PUtMAfSMqZs'; // Replace with your actual key
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        const createShareButtons = (articleTitle, articleUrl) => {
+            const encodedTitle = encodeURIComponent(articleTitle);
+            const encodedUrl = encodeURIComponent(articleUrl);
+
+            // Social media sharing URLs
+            const platforms = {
+                facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+                twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+                whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`,
+                linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`,
+                pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`
+            };
+
+            shareButtonsContainer.innerHTML = `
+                <a href="${platforms.facebook}" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.185 8.441 9.878v-7.054H8.083V12h2.358v-1.6c0-2.31 1.378-3.585 3.489-3.585 1.011 0 1.956.179 2.227.258V6.95c-.328-.04-1.493-.19-2.857-.19-2.825 0-4.757 1.72-4.757 4.908V12h3.587v2.824H12v7.054c4.786-.693 8.441-4.862 8.441-9.878 0-5.523-4.477-10-10-10z"></path>
+                    </svg>
+                </a>
+                <a href="${platforms.twitter}" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Twitter">
+                        <path d="M22.25 6.07c-.77.34-1.6.56-2.47.66.89-.53 1.57-1.37 1.89-2.38-.84.5-1.77.86-2.76 1.06C18.15 4.75 16.92 4 15.54 4c-2.34 0-4.25 1.91-4.25 4.25 0 .33.04.66.12.97C8.1 9.17 5.17 7.5 3.1 4.75c-.34.58-.53 1.25-.53 1.98 0 1.47.75 2.76 1.89 3.52-.7-.02-1.36-.2-1.93-.53v.05c0 2.06 1.47 3.77 3.42 4.15-.36.1-.74.15-1.14.15-.28 0-.55-.03-.81-.08.54 1.69 2.11 2.92 3.97 2.95C10.15 17.5 8.58 18.25 7 18.25c-.27 0-.54-.01-.8-.05 1.57.99 3.44 1.56 5.38 1.56 6.44 0 9.95-5.34 9.95-9.95 0-.15-.01-.3-.01-.45.69-.5 1.29-1.12 1.77-1.83z"></path>
+                    </svg>
+                </a>
+                <a href="${platforms.whatsapp}" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-green-500 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="WhatsApp">
+                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.17 14.17c-.16.16-.36.24-.58.24-.22 0-.42-.08-.58-.24l-1.5-1.5c-.16-.16-.24-.36-.24-.58s.08-.42.24-.58l.75-.75c.16-.16.36-.24.58-.24s.42.08.58.24l.58.58c.16.16.42.16.58 0 .16-.16.16-.42 0-.58l-1.5-1.5c-.16-.16-.36-.24-.58-.24s-.42.08-.58.24l-.58.58c-.16.16-.42.16-.58 0-.16-.16-.16-.42 0-.58l.58-.58c.16-.16.36-.24.58-.24s.42.08.58.24l1.5 1.5c.16.16.24.36.24.58s-.08.42-.24.58zM12 4c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm-1.5 10c.828 0 1.5-.672 1.5-1.5s-.672-1.5-1.5-1.5-1.5.672-1.5 1.5.672 1.5 1.5 1.5z"></path>
+                    </svg>
+                </a>
+                <a href="${platforms.linkedin}" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-700 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn">
+                        <path d="M19.78 19.78h-3.41v-7.14c0-.77-.01-1.76-.11-2.63-.1-.88-.5-1.61-1.32-2.18-.82-.57-1.74-.86-2.96-.86-1.12 0-2.07.24-2.85.73-.78.49-1.36 1.14-1.76 1.95-.4.81-.62 1.83-.62 3.06v5.07h-3.41V9.92h3.27v1.54h.05c.44-.67 1.07-1.22 1.89-1.66.82-.44 1.76-.66 2.79-.66 2.96 0 4.86 1.86 4.86 5.8v7.41zM5.59 7.74c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72zM3.92 9.92h3.39v9.86H3.92z"></path>
+                    </svg>
+                </a>
+            `;
+        };
+
+        const fetchPost = async () => {
+            if (!postId) {
+                articleTitle.textContent = 'Page Not Found';
+                articleContainer.innerHTML = '<p class="text-center text-red-500 dark:text-red-400">Post ID not found in the URL. Please go back to the <a href="allnews.html" class="underline text-green-600">All News</a> page.</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${postId}?key=${apiKey}&fields=id,title,url,published,author,content,images,labels`);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (!data) {
+                    articleTitle.textContent = 'Post Not Found';
+                    articleContainer.innerHTML = '<p class="text-center text-red-500 dark:text-red-400">The requested news article could not be found. It may have been removed or the link is incorrect.</p>';
+                    return;
+                }
+
+                // Set page title
+                document.title = `${data.title} - SportsVartha`;
+
+                // Format published date
+                const publishedDate = new Date(data.published).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                // Construct author information
+                const authorName = data.author && data.author.displayName ? data.author.displayName : 'Admin';
+                const mainImage = data.images && data.images.length > 0 ? data.images[0].url : 'https://placehold.co/800x500/10b981/ffffff?text=SportsVartha';
+
+                articleContainer.innerHTML = `
+                    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4 text-gray-900 dark:text-white">${data.title}</h1>
+                    <div class="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-6">
+                        <span>By ${authorName}</span>
+                        <span class="text-gray-400">•</span>
+                        <span>${publishedDate}</span>
+                        <span class="text-gray-400">•</span>
+                        <span>${data.labels ? data.labels.map(label => `<a href="allnews.html?sport=${label.toLowerCase()}" class="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full px-2 py-1 text-xs font-semibold hover:bg-green-600 hover:text-white transition-colors">${label.toUpperCase()}</a>`).join(' ') : ''}</span>
+                    </div>
+                    <img src="${mainImage}" alt="${data.title}" class="w-full h-auto rounded-xl mb-8 object-cover shadow-md">
+                    <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
+                        ${data.content}
+                    </div>
+                `;
+
+                // Create the share buttons after the article is loaded
+                createShareButtons(data.title, window.location.href);
+
+            } catch (error) {
+                console.error('Error fetching post:', error);
+                articleTitle.textContent = 'Error';
+                articleContainer.innerHTML = '<p class="text-center text-red-500 dark:text-red-400">Failed to load the article. Please check your internet connection and try again later.</p>';
+            }
+        };
+
+        fetchPost();
+    });
     </script>
 </body>
 </html>
