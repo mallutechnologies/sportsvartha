@@ -6,29 +6,26 @@
     <title>SportsVartha - Sports News</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/home.css">
-    </head>
-<body class="bg-gray-100 text-gray-800">
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-300">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <img src="https://placehold.co/40x40/0d9488/ffffff?text=SV" alt="SportsVartha Logo" class="rounded-lg">
-                <span class="text-2xl font-bold text-gray-800">SportsVartha</span>
+                <span class="text-2xl font-bold text-gray-800 dark:text-white">SportsVartha</span>
             </div>
             <div class="md:flex items-center space-x-6 hidden">
-                <a href="../index.html" class="text-gray-600 hover:text-green-600 font-medium">Home</a>
-                <a href="view/allnews.html?name=football" class="text-gray-600 hover:text-green-600 font-medium">Football</a>
-                <a href="view/all.html?name=cricket" class="text-gray-600 hover:text-green-600 font-medium">Cricket</a>
-                <a href="view/allnews.html?name=chess" class="text-gray-600 hover:text-green-600 font-medium">Chess</a>
-                <a href="view/allnews.html" class="text-gray-600 hover:text-green-600 font-medium">All News</a>
+                <a href="../index.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium">Home</a>
+                <a href="view/allnews.html?name=football" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium">Football</a>
+                <a href="view/all.html?name=cricket" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium">Cricket</a>
+                <a href="view/allnews.html?name=chess" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium">Chess</a>
+                <a href="view/allnews.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium">All News</a>
             </div>
             <div class="md:flex items-center space-x-4 hidden">
                 <div class="relative">
-                    <button id="settings-button" class="px-4 py-2 rounded-full border border-gray-300 text-gray-600 hover:text-green-600">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
-                            <path d="M19.016 13.918c-.08-.43-.243-.84-.486-1.22l-.99-1.5c.08-.12.155-.25.228-.38l.99-1.5c.243-.38.406-.79.486-1.22.08-.43.12-.86.12-1.31v-.02c0-.43-.04-.86-.12-1.29-.08-.43-.243-.84-.486-1.22l-1.01-1.52c-.07-.1-.13-.2-.2-.3-.06-.1-.1-.2-.14-.29-.04-.1-.08-.19-.11-.29-.03-.1-.06-.2-.08-.3-.02-.1-.04-.2-.06-.3-.02-.1-.04-.2-.05-.3h-.01c-.13-.43-.31-.83-.55-1.19-.24-.36-.53-.69-.87-.96l-1.5-1c-.34-.27-.72-.49-1.14-.66-.42-.17-.87-.29-1.34-.36-.47-.07-.94-.1-.45-.1zM12 2c-.43 0-.86.04-1.29.12-.43.08-.84.24-1.22.49L7.99 3.99c-.12.08-.25.15-.38.23l-1.5.99c-.38.24-.79.4-1.22.48-.43.08-.86.12-1.31.12h-.02c-.43 0-.86-.04-1.29-.12-.43-.08-.84-.24-1.22-.49l-1.52-1.01c-.1-.07-.2-.13-.3-.2-.1-.06-.2-.1-.29-.14-.1-.04-.19-.08-.29-.11-.1-.03-.2-.06-.3-.08-.1-.02-.2-.04-.3-.06-.1-.02-.2-.04-.3-.05h-.01c-.43-.13-.83-.31-1.19-.55-.36-.24-.69-.53-.96-.87l-1-1.5c-.27-.34-.49-.72-.66-1.14-.17-.42-.29-.87-.36-1.34-.07-.47-.1-.94-.1-1.45zm2 17c.43 0 .86-.04 1.29-.12.43-.08.84-.24 1.22-.49l1.5-1c.38-.24.79-.4 1.22-.48.43-.08.86-.12 1.31-.12h.02c.43 0 .86.04 1.29.12.43.08.84.24 1.22.49l1.52 1.01c.1.07.2.13.3.2.1.06.2.1.29.14.1.04.19.08.29.11.1.03.2.06.3.08.1.02.2.04.3.06.1.02.2.04.3.05h.01c.13.43.31.83.55 1.19.24.36.53.69.87.96l1.5 1c.34.27.72.49 1.14.66.42.17.87.29 1.34.36.47.07.94.1.45.1zm-4-3a2 2 0 100-4 2 2 0 000 4z"></path>
-                        </svg>
+                    <button id="settings-button" class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path><path d="M19.016 13.918c-.08-.43-.243-.84-.486-1.22l-.99-1.5c.08-.12.155-.25.228-.38l.99-1.5c.243-.38.406-.79.486-1.22.08-.43.12-.86.12-1.31v-.02c0-.43-.04-.86-.12-1.29-.08-.43-.243-.84-.486-1.22l-1.01-1.52c-.07-.1-.13-.2-.2-.3-.06-.1-.1-.2-.14-.29-.04-.1-.08-.19-.11-.29-.03-.1-.06-.2-.08-.3-.02-.1-.04-.2-.06-.3-.02-.1-.04-.2-.05-.3h-.01c-.13-.43-.31-.83-.55-1.19-.24-.36-.53-.69-.87-.96l-1.5-1c-.34-.27-.72-.49-1.14-.66-.42-.17-.87-.29-1.34-.36-.47-.07-.94-.1-.45-.1zM12 2c-.43 0-.86.04-1.29.12-.43.08-.84.24-1.22.49L7.99 3.99c-.12.08-.25.15-.38.23l-1.5.99c-.38.24-.79.4-1.22.48-.43.08-.86.12-1.31.12h-.02c-.43 0-.86-.04-1.29-.12-.43-.08-.84-.24-1.22-.49l-1.52-1.01c-.1-.07-.2-.13-.3-.2-.1-.06-.2-.1-.29-.14-.1-.04-.19-.08-.29-.11-.1-.03-.2-.06-.3-.08-.1-.02-.2-.04-.3-.06-.1-.02-.2-.04-.3-.05h-.01c-.43-.13-.83-.31-1.19-.55-.36-.24-.69-.53-.96-.87l-1-1.5c-.27-.34-.49-.72-.66-1.14-.17-.42-.29-.87-.36-1.34-.07-.47-.1-.94-.1-1.45zm2 17c.43 0 .86-.04 1.29-.12.43-.08.84-.24 1.22-.49l1.5-1c.38-.24.79-.4 1.22-.48.43-.08.86-.12 1.31-.12h.02c.43 0 .86.04 1.29.12.43.08.84.24 1.22.49l1.52 1.01c.1.07.2.13.3.2.1.06.2.1.29.14.1.04.19.08.29.11.1.03.2.06.3.08.1.02.2.04.3.06.1.02.2.04.3.05h.01c.13.43.31.83.55 1.19.24.36.53.69.87.96l1.5 1c.34.27.72.49 1.14.66.42.17.87.29 1.34.36.47.07.94.1.45.1zm-4-3a2 2 0 100-4 2 2 0 000 4z"></path></svg>
                     </button>
                     <div id="settings-dropdown" class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg hidden">
                         <div class="py-2">
@@ -46,31 +43,31 @@
                         </div>
                     </div>
                 </div>
-                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <input type="text" placeholder="Search..." class="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500">
                 <button class="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors">Subscribe</button>
             </div>
             <div class="md:hidden flex items-center">
-                <button id="menu-button" class="text-gray-600 focus:outline-none">
+                <button id="menu-button" class="text-gray-600 dark:text-gray-400 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg py-4">
             <div class="flex flex-col items-start px-4 space-y-2">
-                <a href="../index.html" class="text-gray-600 hover:text-green-600 font-medium w-full py-2">Home</a>
-                <a href="view/category.html?name=football" class="text-gray-600 hover:text-green-600 font-medium w-full py-2">Football</a>
-                <a href="view/category.html?name=cricket" class="text-gray-600 hover:text-green-600 font-medium w-full py-2">Cricket</a>
-                <a href="view/category.html?name=chess" class="text-gray-600 hover:text-green-600 font-medium w-full py-2">Chess</a>
-                <a href="view/allnews.html" class="text-gray-600 hover:text-green-600 font-medium w-full py-2">All News</a>
+                <a href="../index.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium w-full py-2">Home</a>
+                <a href="view/allnews.html?name=football" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium w-full py-2">Football</a>
+                <a href="view/all.html?name=cricket" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium w-full py-2">Cricket</a>
+                <a href="view/allnews.html?name=chess" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium w-full py-2">Chess</a>
+                <a href="view/allnews.html" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 font-medium w-full py-2">All News</a>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
         <section class="mb-12">
-            <h2 class="text-lg font-bold uppercase text-green-600 mb-2">Breaking News</h2>
+            <h2 class="text-lg font-bold uppercase text-green-600 dark:text-green-400 mb-2">Breaking News</h2>
             <div class="relative w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg" id="breaking-news-hero">
                 <img src="https://placehold.co/1200x500/0d9488/ffffff?text=Loading..." alt="Breaking News" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-end p-8">
@@ -81,95 +78,60 @@
                 </div>
             </div>
             <div id="breaking-news-small" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                <div class="bg-gray-200 rounded-lg p-3 text-center">
-                    <img src="https://placehold.co/80x80/6b7280/ffffff?text=Img" alt="Loading" class="w-12 h-12 rounded-full mx-auto mb-2">
-                    <p class="text-xs font-semibold">Loading...</p>
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-3 text-center"><p class="text-xs font-semibold">Loading...</p></div>
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-3 text-center"><p class="text-xs font-semibold">Loading...</p></div>
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-3 text-center"><p class="text-xs font-semibold">Loading...</p></div>
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-lg p-3 text-center"><p class="text-xs font-semibold">Loading...</p></div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-center mb-4">
+                <h2 class="text-2xl font-bold dark:text-white">Latest News</h2>
+                <a href="allnews.html" class="ml-2 text-green-600 hover:text-green-700">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div id="featured-article-container" class="relative overflow-hidden rounded-xl h-96">
+                    <img src="https://placehold.co/1200x800/22c55e/ffffff?text=Featured+Article" alt="Featured News" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
+                        <div class="flex items-center space-x-2 text-sm font-medium mb-2">
+                            <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">Category</span>
+                            <span>10 minutes ago</span>
+                        </div>
+                        <h3 class="text-2xl font-bold leading-tight">Record-Breaking Performance Propels Team to Dominant Win</h3>
+                    </div>
                 </div>
-                <div class="bg-gray-200 rounded-lg p-3 text-center">
-                    <img src="https://placehold.co/80x80/6b7280/ffffff?text=Img" alt="Loading" class="w-12 h-12 rounded-full mx-auto mb-2">
-                    <p class="text-xs font-semibold">Loading...</p>
-                </div>
-                <div class="bg-gray-200 rounded-lg p-3 text-center">
-                    <img src="https://placehold.co/80x80/6b7280/ffffff?text=Img" alt="Loading" class="w-12 h-12 rounded-full mx-auto mb-2">
-                    <p class="text-xs font-semibold">Loading...</p>
-                </div>
-                <div class="bg-gray-200 rounded-lg p-3 text-center">
-                    <img src="https://placehold.co/80x80/6b7280/ffffff?text=Img" alt="Loading" class="w-12 h-12 rounded-full mx-auto mb-2">
-                    <p class="text-xs font-semibold">Loading...</p>
+        
+                <div id="top-headlines-container" class="space-y-4">
+                    <p class="text-center text-gray-500">Loading top headlines...</p>
+                    <p class="text-center text-gray-500">Loading top headlines...</p>
+                    <p class="text-center text-gray-500">Loading top headlines...</p>
                 </div>
             </div>
         </section>
-        <section class="mb-12">
-    <div class="flex items-center mb-4">
-        <h2 class="text-2xl font-bold">Latest News</h2>
-        <a href="allnews.html" class="ml-2 text-green-600 hover:text-green-700">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 4.5l6 6-6 6"></path>
-            </svg>
-        </a>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div id="featured-article-container" class="relative overflow-hidden rounded-xl h-96">
-            <img src="https://placehold.co/1200x800/22c55e/ffffff?text=Featured+Article" alt="Featured News" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
-                <div class="flex items-center space-x-2 text-sm font-medium mb-2">
-                    <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">Category</span>
-                    <span>10 minutes ago</span>
-                </div>
-                <h3 class="text-2xl font-bold leading-tight">Record-Breaking Performance Propels Team to Dominant Win</h3>
-            </div>
-        </div>
-
-        <div id="top-headlines-container" class="space-y-4">
-            <p class="text-center text-gray-500">Loading top headlines...</p>
-            <p class="text-center text-gray-500">Loading top headlines...</p>
-            <p class="text-center text-gray-500">Loading top headlines...</p>
-        </div>
-    </div>
-</section>
         
         <section class="mb-12">
             <div class="flex items-center mb-4">
-                <h2 class="text-2xl font-bold">Trending News</h2>
+                <h2 class="text-2xl font-bold dark:text-white">Trending News</h2>
                 <a href="allnews.html" class="ml-2 text-green-600 hover:text-green-700">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 4.5l6 6-6 6"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
                 </a>
             </div>
             <div id="latest-news-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
-                    </div>
-                </div>
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
             </div>
         </section>
 
         <section class="mb-12">
             <div class="flex items-center mb-4">
-                <h2 class="text-2xl font-bold">Football News</h2>
+                <h2 class="text-2xl font-bold dark:text-white">Football News</h2>
                 <a href="allnews.html?sport=football" class="ml-2 text-green-600 hover:text-green-700">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 4.5l6 6-6 6"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
                 </a>
             </div>
             <div id="football-news-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -179,46 +141,42 @@
 
         <section class="mb-12">
             <div class="flex items-center mb-4">
-                <h2 class="text-2xl font-bold">Cricket News</h2>
+                <h2 class="text-2xl font-bold dark:text-white">Cricket News</h2>
                 <a href="allnews.html?sport=cricket" class="ml-2 text-green-600 hover:text-green-700">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 4.5l6 6-6 6"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
                 </a>
             </div>
             <div id="cricket-news-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <p class="text-center text-gray-500 col-span-full">Loading cricket news...</p>
             </div>
         </section>
-           <section class="mb-12">
-            <div class="flex items-center mb-4">
-                <h2 class="text-2xl font-bold">Other Sports</h2>
-                <a href="allnews.html" class="ml-2 text-green-600 hover:text-green-700">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 4.5l6 6-6 6"></path>
-                    </svg>
-                </a>
-            </div>
-            <div id="latest-news-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
+        
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center">
+                        <h2 class="text-2xl font-bold dark:text-white">More Articles</h2>
+                        <a href="#" class="ml-2 text-green-600 hover:text-green-700">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
+                        </a>
+                    </div>
+                    <div id="more-articles-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden">
+                            <img src="https://placehold.co/400x250/10b981/ffffff?text=Loading..." alt="Article" class="w-full h-48 object-cover">
+                            <div class="p-4"><h3 class="font-bold text-lg mb-1">Loading...</h3><p class="text-sm text-gray-600">Loading...</p></div>
+                        </div>
+                        <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden">
+                            <img src="https://placehold.co/400x250/10b981/ffffff?text=Loading..." alt="Article" class="w-full h-48 object-cover">
+                            <div class="p-4"><h3 class="font-bold text-lg mb-1">Loading...</h3><p class="text-sm text-gray-600">Loading...</p></div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
-                    </div>
-                </div>
-                <div class="flex flex-col bg-white rounded-2xl p-4 shadow-md">
-                    <img src="https://placehold.co/150x150/10b981/ffffff?text=Loading..." alt="Loading" class="w-full h-36 object-cover rounded-xl mb-4">
-                    <div>
-                        <h4 class="font-bold text-lg leading-tight mb-2">Loading...</h4>
-                        <p class="text-sm text-gray-600">Loading content from SportsVartha blog...</p>
+                <div class="md:col-span-1 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Top Headlines</h3>
+                    <div id="sidebar-headlines-container" class="space-y-4">
+                        <div class="flex items-center"><p class="text-sm font-semibold">Loading top headlines...</p></div>
+                        <div class="flex items-center"><p class="text-sm font-semibold">Loading top headlines...</p></div>
+                        <div class="flex items-center"><p class="text-sm font-semibold">Loading top headlines...</p></div>
                     </div>
                 </div>
             </div>
@@ -226,11 +184,23 @@
 
         <section class="mb-12">
             <div class="flex items-center mb-4">
-                <h2 class="text-2xl font-bold">Latest Video</h2>
+                <h2 class="text-2xl font-bold dark:text-white">Other Sports</h2>
+                <a href="allnews.html" class="ml-2 text-green-600 hover:text-green-700">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
+                </a>
+            </div>
+            <div id="other-sports-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
+                <div class="flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md"><p class="text-center text-gray-500">Loading...</p></div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="flex items-center mb-4">
+                <h2 class="text-2xl font-bold dark:text-white">Latest Video</h2>
                 <a href="#" class="ml-2 text-green-600 hover:text-green-700">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 4.5l6 6-6 6"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5l6 6-6 6"></path></svg>
                 </a>
             </div>
             <div class="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
@@ -243,88 +213,33 @@
         </section>
 
         <section class="mb-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 space-y-4">
-                    <div class="flex items-center">
-                        <h2 class="text-2xl font-bold">Article</h2>
-                        <a href="#" class="ml-2 text-green-600 hover:text-green-700">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 4.5l6 6-6 6"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="relative bg-white rounded-2xl shadow-md overflow-hidden">
-                            <img src="https://placehold.co/400x250/10b981/ffffff?text=Article" alt="Article" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-1">Article Headline</h3>
-                                <p class="text-sm text-gray-600">A short description of the article content.</p>
-                            </div>
-                        </div>
-                        <div class="relative bg-white rounded-2xl shadow-md overflow-hidden">
-                            <img src="https://placehold.co/400x250/10b981/ffffff?text=Article" alt="Article" class="w-full h-48 object-cover">
-                            <div class="p-4">
-                                <h3 class="font-bold text-lg mb-1">Another Article Headline</h3>
-                                <p class="text-sm text-gray-600">Another short description of an article.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-1 bg-white rounded-2xl shadow-md p-6">
-                    <h3 class="text-xl font-bold mb-4">Top Headlines</h3>
-                    <div id="top-headlines-container" class="space-y-4">
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/60x60/10b981/ffffff?text=Top" alt="Loading" class="w-16 h-16 object-cover rounded-md mr-4">
-                            <p class="text-sm font-semibold">Loading top headlines...</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/60x60/10b981/ffffff?text=Top" alt="Loading" class="w-16 h-16 object-cover rounded-md mr-4">
-                            <p class="text-sm font-semibold">Loading top headlines...</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/60x60/10b981/ffffff?text=Top" alt="Loading" class="w-16 h-16 object-cover rounded-md mr-4">
-                            <p class="text-sm font-semibold">Loading top headlines...</p>
-                        </div>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/60x60/10b981/ffffff?text=Top" alt="Loading" class="w-16 h-16 object-cover rounded-md mr-4">
-                            <p class="text-sm font-semibold">Loading top headlines...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-4">
-                    <h2 class="text-2xl font-bold">Sport Podcast</h2>
-                    <div class="bg-white rounded-2xl shadow-md flex items-center p-4">
+                    <h2 class="text-2xl font-bold dark:text-white">Sport Podcast</h2>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md flex items-center p-4">
                         <img src="https://placehold.co/150x150/10b981/ffffff?text=Podcast" alt="Podcast" class="w-36 h-36 object-cover rounded-xl mr-4">
                         <div class="space-y-2">
-                            <h3 class="font-bold text-lg">Daily Sports Talk</h3>
-                            <p class="text-sm text-gray-600">Catch up on all the latest news with our daily podcast episodes.</p>
+                            <h3 class="font-bold text-lg dark:text-white">Daily Sports Talk</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Catch up on all the latest news with our daily podcast episodes.</p>
                             <button class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors">Listen Now</button>
                         </div>
                     </div>
                 </div>
-                <section class="mb-12">
-    <div class="bg-white p-6 rounded-lg shadow-md text-center border border-gray-200">
-        <p class="text-sm font-semibold text-gray-500 mb-2">Advertisement</p>
-        <div id="ad-container" class="bg-gray-100 p-8 rounded-md text-gray-400">
-            <p class="text-lg">Place Your Ad Code Here</p>
-        </div>
-    </div>
-</section>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center border border-gray-200 dark:border-gray-700">
+                    <p class="text-sm font-semibold text-gray-500 mb-2">Advertisement</p>
+                    <div id="ad-container" class="bg-gray-100 dark:bg-gray-700 p-8 rounded-md text-gray-400">
+                        <p class="text-lg">Place Your Ad Code Here</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     
-    
-        <nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-50 md:hidden shadow-xl">
+    <nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-50 md:hidden shadow-xl">
         <div id="mobile-navbar-container" class="flex justify-around items-center h-16 w-full max-w-full mx-auto px-0">
             
-            <a href="../index.html" class="flex flex-col items-center justify-center py-2 px-1 text-gray-500 dark:text-gray-400 hover:text-green-600 transition-colors flex-shrink-0 w-1/4">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://cdn-icons-png.flaticon.com/512/5219/5219891.png"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l-7-7-7 7m7-7v10a1 1 0 001 1h3m-3-3h3"></path></svg>
+            <a href="../index.html" class="flex flex-col items-center justify-center py-2 px-1 text-green-600 dark:text-green-400 hover:text-green-700 transition-colors flex-shrink-0 w-1/4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l-7-7-7 7m7-7v10a1 1 0 001 1h3m-3-3h3"></path></svg>
                 <span class="text-[10px] mt-1 whitespace-nowrap">Home</span>
             </a>
 
@@ -333,7 +248,7 @@
                 <span class="text-[10px] mt-1 whitespace-nowrap">News</span>
             </a>
 
-            <a href="#all-news" class="flex flex-col items-center justify-center py-2 px-1 text-gray-500 dark:text-gray-400 hover:text-green-600 transition-colors flex-shrink-0 w-1/4">
+            <a href="view/allnews.html" class="flex flex-col items-center justify-center py-2 px-1 text-gray-500 dark:text-gray-400 hover:text-green-600 transition-colors flex-shrink-0 w-1/4">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 <span class="text-[10px] mt-1 whitespace-nowrap">Search</span>
             </a>
@@ -345,8 +260,6 @@
         </div>
     </nav>
     
-    
-
     <footer class="bg-gray-900 text-gray-300 py-12 mt-8">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="flex flex-col items-start">
@@ -379,26 +292,10 @@
             <div>
                 <h4 class="text-white font-semibold mb-2">Follow Us</h4>
                 <div class="flex space-x-4 mb-4">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook">
-                            <path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.185 8.441 9.878v-7.054H8.083V12h2.358v-1.6c0-2.31 1.378-3.585 3.489-3.585 1.011 0 1.956.179 2.227.258V6.95c-.328-.04-1.493-.19-2.857-.19-2.825 0-4.757 1.72-4.757 4.908V12h3.587v2.824H12v7.054c4.786-.693 8.441-4.862 8.441-9.878 0-5.523-4.477-10-10-10z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Twitter">
-                            <path d="M22.25 6.07c-.77.34-1.6.56-2.47.66.89-.53 1.57-1.37 1.89-2.38-.84.5-1.77.86-2.76 1.06C18.15 4.75 16.92 4 15.54 4c-2.34 0-4.25 1.91-4.25 4.25 0 .33.04.66.12.97C8.1 9.17 5.17 7.5 3.1 4.75c-.34.58-.53 1.25-.53 1.98 0 1.47.75 2.76 1.89 3.52-.7-.02-1.36-.2-1.93-.53v.05c0 2.06 1.47 3.77 3.42 4.15-.36.1-.74.15-1.14.15-.28 0-.55-.03-.81-.08.54 1.69 2.11 2.92 3.97 2.95C10.15 17.5 8.58 18.25 7 18.25c-.27 0-.54-.01-.8-.05 1.57.99 3.44 1.56 5.38 1.56 6.44 0 9.95-5.34 9.95-9.95 0-.15-.01-.3-.01-.45.69-.5 1.29-1.12 1.77-1.83z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram">
-                            <path d="M12 2c2.716 0 3.056.012 4.124.06c.995.048 1.637.208 2.218.428.584.226 1.018.528 1.453.963.435.435.737.87.963 1.453.22.581.38 1.223.428 2.218.048 1.068.06 1.408.06 4.124s-.012 3.056-.06 4.124c-.048.995-.208 1.637-.428 2.218-.226.584-.528 1.018-.963 1.453-.435.435-.737-.87-.963-1.453-.22-.581-.38-1.223-.428-2.218-.048-1.068-.06-1.408-.06-4.124s.012-3.056.06-4.124c.048-.995.208-1.637.428-2.218.226-.584.528-1.018.963-1.453.435-.435.87-.737 1.453-.963.581-.22 1.223-.38 2.218-.428C8.944 2.012 9.284 2 12 2zm0 2c-2.656 0-2.952.01-3.992.058-.934.045-1.488.195-1.928.376-.442.18-.787.41-.976.599-.189.189-.419.534-.599.976-.18.44-.33.994-.376 1.928-.048 1.04-.058 1.336-.058 3.992s.01 2.952.058 3.992c.045.934.195 1.488.376 1.928.18.44.41.787.599.976.189.189.534.419.976.599.44.18.994.33 1.928.376 1.04.048 1.336.058 3.992.058s2.952-.01 3.992-.058c.934-.045 1.488-.195 1.928-.376-.442-.18-.787-.41-.976-.599-.189-.189-.534-.419-.976-.599-.44-.18-.994-.33-1.928-.376-1.04-.048-1.336-.058-3.992-.058z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn">
-                            <path d="M19.78 19.78h-3.41v-7.14c0-.77-.01-1.76-.11-2.63-.1-.88-.5-1.61-1.32-2.18-.82-.57-1.74-.86-2.96-.86-1.12 0-2.07.24-2.85.73-.78.49-1.36 1.14-1.76 1.95-.4.81-.62 1.83-.62 3.06v5.07h-3.41V9.92h3.27v1.54h.05c.44-.67 1.07-1.22 1.89-1.66.82-.44 1.76-.66 2.79-.66 2.96 0 4.86 1.86 4.86 5.8v7.41zM5.59 7.74c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72zM3.92 9.92h3.39v9.86H3.92z"></path>
-                        </svg>
-                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Facebook"><path d="M12 2C6.477 2 2 6.477 2 12c0 5.016 3.655 9.185 8.441 9.878v-7.054H8.083V12h2.358v-1.6c0-2.31 1.378-3.585 3.489-3.585 1.011 0 1.956.179 2.227.258V6.95c-.328-.04-1.493-.19-2.857-.19-2.825 0-4.757 1.72-4.757 4.908V12h3.587v2.824H12v7.054c4.786-.693 8.441-4.862 8.441-9.878 0-5.523-4.477-10-10-10z"></path></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Twitter"><path d="M22.25 6.07c-.77.34-1.6.56-2.47.66.89-.53 1.57-1.37 1.89-2.38-.84.5-1.77.86-2.76 1.06C18.15 4.75 16.92 4 15.54 4c-2.34 0-4.25 1.91-4.25 4.25 0 .33.04.66.12.97C8.1 9.17 5.17 7.5 3.1 4.75c-.34.58-.53 1.25-.53 1.98 0 1.47.75 2.76 1.89 3.52-.7-.02-1.36-.2-1.93-.53v.05c0 2.06 1.47 3.77 3.42 4.15-.36.1-.74.15-1.14.15-.28 0-.55-.03-.81-.08.54 1.69 2.11 2.92 3.97 2.95C10.15 17.5 8.58 18.25 7 18.25c-.27 0-.54-.01-.8-.05 1.57.99 3.44 1.56 5.38 1.56 6.44 0 9.95-5.34 9.95-9.95 0-.15-.01-.3-.01-.45.69-.5 1.29-1.12 1.77-1.83z"></path></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="Instagram"><path d="M12 2c2.716 0 3.056.012 4.124.06c.995.048 1.637.208 2.218.428.584.226 1.018.528 1.453.963.435.435.737.87.963 1.453.22.581.38 1.223.428 2.218.048 1.068.06 1.408.06 4.124s-.012 3.056-.06 4.124c-.048.995-.208 1.637-.428 2.218-.226.584-.528 1.018-.963 1.453-.435.435-.737-.87-.963-1.453-.22-.581-.38-1.223-.428-2.218-.048-1.068-.06-1.408-.06-4.124s.012-3.056.06-4.124c.048-.995.208-1.637.428-2.218.226-.584.528-1.018.963-1.453.435-.435.87-.737 1.453-.963.581-.22 1.223-.38 2.218-.428C8.944 2.012 9.284 2 12 2zm0 2c-2.656 0-2.952.01-3.992.058-.934.045-1.488.195-1.928.376-.442.18-.787.41-.976.599-.189.189-.419.534-.599.976-.18.44-.33.994-.376 1.928-.048 1.04-.058 1.336-.058 3.992s.01 2.952.058 3.992c.045.934.195 1.488.376 1.928.18.44.41.787.599.976.189.189.534.419.976.599.44.18.994.33 1.928.376 1.04.048 1.336.058 3.992.058s2.952-.01 3.992-.058c.934-.045 1.488-.195 1.928-.376-.442-.18-.787-.41-.976-.599-.189-.189-.534-.419-.976-.599-.44-.18-.994-.33-1.928-.376-1.04-.048-1.336-.058-3.992-.058z"></path></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-label="LinkedIn"><path d="M19.78 19.78h-3.41v-7.14c0-.77-.01-1.76-.11-2.63-.1-.88-.5-1.61-1.32-2.18-.82-.57-1.74-.86-2.96-.86-1.12 0-2.07.24-2.85.73-.78.49-1.36 1.14-1.76 1.95-.4.81-.62 1.83-.62 3.06v5.07h-3.41V9.92h3.27v1.54h.05c.44-.67 1.07-1.22 1.89-1.66.82-.44 1.76-.66 2.79-.66 2.96 0 4.86 1.86 4.86 5.8v7.41zM5.59 7.74c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72zM3.92 9.92h3.39v9.86H3.92z"></path></svg></a>
                 </div>
                 <h4 class="text-white font-semibold mb-2">Newsletter</h4>
                 <p class="text-sm text-gray-400 mb-4">Get the latest news directly to your inbox.</p>
@@ -418,25 +315,92 @@
             const settingsButton = document.getElementById('settings-button');
             const settingsDropdown = document.getElementById('settings-dropdown');
             const menuButton = document.getElementById('menu-button');
-            const mobileMenu = document.getElementById('mobile-menu'); // <-- Targeted mobile menu div
+            const mobileMenu = document.getElementById('mobile-menu');
             const themeToggle = document.getElementById('theme-toggle');
+            
+            // Main Content Containers
             const breakingNewsHero = document.getElementById('breaking-news-hero');
-            const latestNewsContainer = document.getElementById('latest-news-container');
             const breakingNewsSmall = document.getElementById('breaking-news-small');
-            const topHeadlinesContainer = document.getElementById('top-headlines-container');
+            const featuredArticleContainer = document.getElementById('featured-article-container');
+            const topHeadlinesContainer = document.getElementById('top-headlines-container'); // List next to featured article
+            const latestNewsContainer = document.getElementById('latest-news-container'); // Trending News
             const footballNewsContainer = document.getElementById('football-news-container');
             const cricketNewsContainer = document.getElementById('cricket-news-container');
 
-            settingsButton.addEventListener('click', () => {
-                settingsDropdown.classList.toggle('hidden');
-            });
+            // NEWLY ADDED/RENAMED Containers
+            const moreArticlesContainer = document.getElementById('more-articles-container'); 
+            const sidebarHeadlinesContainer = document.getElementById('sidebar-headlines-container');
+            const otherSportsContainer = document.getElementById('other-sports-container');
 
-            // CORRECTED MOBILE MENU TOGGLE LOGIC
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            // END CORRECTION
+            // Blogger API details (using your provided key/ID)
+            const blogId = '9203313027406187559';
+            // NOTE: Using a public key in client-side code is generally discouraged for production.
+            const apiKey = 'AIzaSyBnyzGyLe1p8GuxG9m6CsB0PUtMAfSMqZs';
+            const placeholderImage = 'https://placehold.co/1200x500/10b981/ffffff?text=SportsVartha';
+            const placeholderAuthorImage = 'https://placehold.co/40x40/cbd5e1/4b5563?text=A';
+            
+            // --- Utility Functions ---
 
+            const minutesSince = (published) => {
+                const diff = new Date() - new Date(published);
+                const minutes = Math.floor(diff / 60000);
+                if (minutes < 60) return `${minutes} minutes ago`;
+                const hours = Math.floor(minutes / 60);
+                if (hours < 24) return `${hours} hours ago`;
+                const days = Math.floor(hours / 24);
+                return `${days} days ago`;
+            };
+
+            const renderArticleCard = (post) => {
+                const postImage = post.images ? post.images[0].url : 'https://placehold.co/150x150/10b981/ffffff?text=SportsVartha';
+                const postTitle = post.title;
+                const postId = post.id;
+                // Safely extract and truncate text content
+                const postSummary = post.content ? post.content.replace(/<[^>]*>?/gm, '').substring(0, 100) + '...' : 'No summary available.';
+                
+                const postElement = document.createElement('div');
+                postElement.className = 'flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
+                postElement.innerHTML = `
+                    <a href="view/readnews.html?id=${postId}" class="block">
+                        <img src="${postImage}" alt="${postTitle}" class="w-full h-36 object-cover rounded-xl mb-4">
+                        <div>
+                            <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 dark:text-white transition-colors">${postTitle}</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">${postSummary}</p>
+                        </div>
+                    </a>
+                `;
+                return postElement;
+            };
+            
+            // General Post Fetcher (for category sections like Football, Cricket, Other Sports)
+            const fetchAndRenderCategoryPosts = (containerId, queryParams, maxResults = 3) => {
+                const apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=${maxResults}&fields=items(id,title,url,images,content,labels)&fetchImages=true${queryParams}`;
+                const container = document.getElementById(containerId);
+
+                fetch(apiUrl)
+                    .then(response => response.ok ? response.json() : Promise.reject(`HTTP error! status: ${response.status}`))
+                    .then(data => {
+                        const posts = data.items;
+                        if (posts && posts.length > 0) {
+                            container.innerHTML = ''; // Clear loading message
+                            posts.forEach(post => {
+                                container.appendChild(renderArticleCard(post));
+                            });
+                        } else {
+                            container.innerHTML = `<p class="text-center text-gray-500 col-span-full">No news posts found for this section.</p>`;
+                        }
+                    })
+                    .catch(error => {
+                        console.error(`Error fetching news for ${containerId}:`, error);
+                        container.innerHTML = `<p class="text-center text-red-500 col-span-full">Failed to load news for this section.</p>`;
+                    });
+            };
+
+            // --- Event Listeners and Theme Logic (Kept as is) ---
+            settingsButton.addEventListener('click', () => { settingsDropdown.classList.toggle('hidden'); });
+            menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+            // Dark Mode initialization
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark');
                 themeToggle.checked = true;
@@ -454,68 +418,27 @@
                 }
             });
 
-            const blogId = '9203313027406187559';
-            const apiKey = 'AIzaSyBnyzGyLe1p8GuxG9m6CsB0PUtMAfSMqZs';
-            
-            const placeholderImage = 'https://placehold.co/1200x500/10b981/ffffff?text=SportsVartha';
 
-            const fetchAndRenderPosts = (containerId, queryParams) => {
-                const apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=3&fields=items(id,title,url,images,content)&fetchImages=true${queryParams}`;
-                const container = document.getElementById(containerId);
-
-                fetch(apiUrl)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        const posts = data.items;
-
-                        if (posts && posts.length > 0) {
-                            container.innerHTML = '';
-                            posts.forEach(post => {
-                                const postImage = post.images ? post.images[0].url : 'https://placehold.co/150x150/10b981/ffffff?text=SportsVartha';
-                                const postTitle = post.title;
-                                const postId = post.id;
-                                const postSummary = post.content.replace(/<[^>]*>?/gm, '').substring(0, 100) + '...';
-                                
-                                const postElement = document.createElement('div');
-                                postElement.className = 'flex flex-col bg-white rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
-                                postElement.innerHTML = `
-                                    <a href="view/readnews.html?id=${postId}" class="block">
-                                        <img src="${postImage}" alt="${postTitle}" class="w-full h-36 object-cover rounded-xl mb-4">
-                                        <div>
-                                            <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 transition-colors">${postTitle}</h4>
-                                            <p class="text-sm text-gray-600">${postSummary}</p>
-                                        </div>
-                                    </a>
-                                `;
-                                container.appendChild(postElement);
-                            });
-                        } else {
-                            container.innerHTML = '<p class="text-center text-gray-500 col-span-full">No news posts found for this category.</p>';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching blog posts:', error);
-                        container.innerHTML = '<p class="text-center text-red-500 col-span-full">Failed to load news. Please try again later.</p>';
-                    });
-            };
+            // --- API Data Fetching ---
 
             if (blogId && apiKey) {
-                // Fetch for Breaking News Hero
-                fetch(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=10&fields=items(id,title,url,images,content)&fetchImages=true`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        const posts = data.items;
-                        if (posts && posts.length > 0) {
+                const fetchAllNews = () => {
+                    // Fetch up to 10 latest posts for the initial page load (hero, small breaking, featured, trending, sidebar headlines)
+                    const apiUrl = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=10&fields=items(id,title,url,images,content,published,author,labels)&fetchImages=true`;
+                    
+                    fetch(apiUrl)
+                        .then(response => response.ok ? response.json() : Promise.reject(`HTTP error! status: ${response.status}`))
+                        .then(data => {
+                            const posts = data.items;
+                            if (!posts || posts.length === 0) {
+                                // If no posts, show fallback for major sections
+                                breakingNewsHero.innerHTML = '<p class="text-center text-gray-500">No breaking news found.</p>';
+                                featuredArticleContainer.innerHTML = '<p class="text-center p-6 text-gray-500">No news posts found.</p>';
+                                latestNewsContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">No news posts found.</p>';
+                                return;
+                            }
+                            
+                            // 1. Breaking News Hero (Post 0)
                             const heroPost = posts[0];
                             const heroImage = heroPost.images ? heroPost.images[0].url : placeholderImage;
                             const heroTitle = heroPost.title;
@@ -529,6 +452,8 @@
                                     </div>
                                 </div>
                             `;
+
+                            // 2. Breaking News Small (Posts 1-4)
                             breakingNewsSmall.innerHTML = '';
                             posts.slice(1, 5).forEach(post => {
                                 const postImage = post.images ? post.images[0].url : 'https://placehold.co/80x80/6b7280/ffffff?text=SV';
@@ -539,30 +464,60 @@
                                 postElement.className = 'bg-white dark:bg-gray-800 rounded-lg p-3 text-center transition-transform transform hover:scale-105 shadow-md';
                                 postElement.innerHTML = `
                                     <img src="${postImage}" alt="${postTitle}" class="w-12 h-12 rounded-full mx-auto mb-2 object-cover">
-                                    <p class="text-xs font-semibold">${postTitle}</p>
+                                    <p class="text-xs font-semibold truncate dark:text-gray-200">${postTitle}</p>
                                 `;
                                 breakingNewsSmall.appendChild(postElement);
                             });
+
+                            // 3. Featured Article (Post 0 - Re-rendering with richer metadata)
+                            const featuredPost = posts[0];
+                            const f_heroImage = featuredPost.images ? featuredPost.images[0].url : placeholderImage;
+                            const f_heroTitle = featuredPost.title;
+                            const f_heroCategory = featuredPost.labels && featuredPost.labels.length > 0 ? featuredPost.labels[0] : 'News';
+                            const f_publishedDate = new Date(featuredPost.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+                            featuredArticleContainer.innerHTML = `
+                                <img src="${f_heroImage}" alt="${f_heroTitle}" class="w-full h-full object-cover">
+                                <a href="view/readnews.html?id=${featuredPost.id}" class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
+                                    <div class="flex items-center space-x-2 text-sm font-medium mb-2">
+                                        <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">${f_heroCategory.toUpperCase()}</span>
+                                        <span>${f_publishedDate}</span>
+                                    </div>
+                                    <h3 class="text-2xl font-bold leading-tight">${f_heroTitle}</h3>
+                                </a>
+                            `;
+
+                            // 4. Top Headlines (Next to featured article - Posts 1-3)
+                            topHeadlinesContainer.innerHTML = '';
+                            posts.slice(1, 4).forEach(post => {
+                                const postAuthorName = post.author && post.author.displayName ? post.author.displayName : 'Admin';
+                                const postPublishedTime = post.published ? minutesSince(post.published) : 'Unknown time';
+
+                                const postElement = document.createElement('a');
+                                postElement.href = `view/readnews.html?id=${post.id}`;
+                                postElement.className = 'flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-100 transition-colors dark:bg-gray-800 dark:hover:bg-gray-700';
+                                postElement.innerHTML = `
+                                    <img src="${post.images ? post.images[0].url : placeholderAuthorImage}" alt="${post.title}" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-center space-x-1 text-sm text-gray-500 mb-1">
+                                            <span class="font-semibold text-gray-800 dark:text-gray-200">${postAuthorName}</span>
+                                            <span class="text-xs">•</span>
+                                            <span class="text-xs">${postPublishedTime}</span>
+                                        </div>
+                                        <h4 class="font-bold text-base leading-tight hover:text-green-600 dark:text-white">${post.title}</h4>
+                                    </div>
+                                `;
+                                topHeadlinesContainer.appendChild(postElement);
+                            });
+
+                            // 5. Trending News (Posts 5-7 - note: slice(5, 8) gets posts at index 5, 6, 7)
                             latestNewsContainer.innerHTML = '';
                             posts.slice(5, 8).forEach(post => {
-                                const postImage = post.images ? post.images[0].url : 'https://placehold.co/150x150/10b981/ffffff?text=SportsVartha';
-                                const postTitle = post.title;
-                                const postId = post.id;
-                                const postSummary = post.content.replace(/<[^>]*>?/gm, '').substring(0, 100) + '...';
-                                const postElement = document.createElement('div');
-                                postElement.className = 'flex flex-col bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-md transition-transform transform hover:scale-105';
-                                postElement.innerHTML = `
-                                    <a href="view/readnews.html?id=${postId}" class="block">
-                                        <img src="${postImage}" alt="${postTitle}" class="w-full h-36 object-cover rounded-xl mb-4">
-                                        <div>
-                                            <h4 class="font-bold text-lg leading-tight mb-2 hover:text-green-600 transition-colors">${postTitle}</h4>
-                                            <p class="text-sm text-gray-600">${postSummary}</p>
-                                        </div>
-                                    </a>
-                                `;
-                                latestNewsContainer.appendChild(postElement);
+                                latestNewsContainer.appendChild(renderArticleCard(post));
                             });
-                            topHeadlinesContainer.innerHTML = '';
+                            
+                            // 6. Sidebar Headlines (Posts 0-3 for a compact list, slightly redundant with breaking small but common)
+                            sidebarHeadlinesContainer.innerHTML = '';
                             posts.slice(0, 4).forEach(post => {
                                 const postImage = post.images ? post.images[0].url : 'https://placehold.co/60x60/10b981/ffffff?text=SV';
                                 const postTitle = post.title;
@@ -572,119 +527,34 @@
                                 postElement.className = 'flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-md transition-colors';
                                 postElement.innerHTML = `
                                     <img src="${postImage}" alt="${postTitle}" class="w-16 h-16 object-cover rounded-md mr-4">
-                                    <p class="text-sm font-semibold">${postTitle}</p>
+                                    <p class="text-sm font-semibold dark:text-white">${postTitle}</p>
                                 `;
-                                topHeadlinesContainer.appendChild(postElement);
+                                sidebarHeadlinesContainer.appendChild(postElement);
                             });
-                        } else {
-                            breakingNewsHero.innerHTML = '<p class="text-center text-gray-500">No breaking news found.</p>';
-                            latestNewsContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">No news posts found.</p>';
-                            breakingNewsSmall.innerHTML = '';
-                            topHeadlinesContainer.innerHTML = '';
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching blog posts:', error);
-                        breakingNewsHero.innerHTML = '<p class="text-center text-red-500">Failed to load news.</p>';
-                        latestNewsContainer.innerHTML = '<p class="text-center text-red-500 col-span-full">Failed to load news. Please try again later.</p>';
-                    });
 
-                // Fetch Football News
-                fetchAndRenderPosts('football-news-container', '&labels=football');
+                            // 7. More Articles (Posts 8-9)
+                            moreArticlesContainer.innerHTML = '';
+                            posts.slice(8, 10).forEach(post => {
+                                moreArticlesContainer.appendChild(renderArticleCard(post));
+                            });
 
-                // Fetch Cricket News
-                fetchAndRenderPosts('cricket-news-container', '&labels=cricket');
+                        })
+                        .catch(error => {
+                            console.error('Error fetching general news:', error);
+                            // Fallback messages for all main containers
+                        });
+                };
+
+                // Execute general fetch
+                fetchAllNews();
+                
+                // Separate calls for labeled content
+                fetchAndRenderCategoryPosts('football-news-container', '&labels=football');
+                fetchAndRenderCategoryPosts('cricket-news-container', '&labels=cricket');
+                // Other Sports: Fetches generic posts, starting from post 10 (or just the latest 3 if less than 10 available)
+                fetchAndRenderCategoryPosts('other-sports-container', '&startIndex=10');
             }
         });
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const featuredArticleContainer = document.getElementById('featured-article-container');
-        // NOTE: top-headlines-container is also used in the previous DOMContentLoaded block, so we redeclare it here.
-        // It would be better practice to combine these two blocks or rename one of the IDs.
-        // For the sake of fixing the mobile menu, we'll proceed as is, but be aware of the duplicate ID.
-        // const topHeadlinesContainer = document.getElementById('top-headlines-container'); 
-
-        const blogId = '9203313027406187559';
-        const apiKey = 'AIzaSyBnyzGyLe1p8GuxG9m6CsB0PUtMAfSMqZs';
-        
-        const placeholderImage = 'https://placehold.co/1200x800/10b981/ffffff?text=SportsVartha';
-        const placeholderAuthorImage = 'https://placehold.co/40x40/cbd5e1/4b5563?text=A';
-
-        const fetchTopNews = () => {
-            fetch(`https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=4&fields=items(id,title,url,images,content,published,author,labels)&fetchImages=true`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const posts = data.items;
-                    // Re-fetch the topHeadlinesContainer since it's used here and in the block above
-                    const topHeadlinesContainerSmall = document.getElementById('top-headlines-container'); 
-
-                    if (posts && posts.length > 0) {
-                        // Render the large featured article
-                        const featuredPost = posts[0];
-                        const heroImage = featuredPost.images ? featuredPost.images[0].url : placeholderImage;
-                        const heroTitle = featuredPost.title;
-                        const heroCategory = featuredPost.labels && featuredPost.labels.length > 0 ? featuredPost.labels[0] : 'News';
-                        const publishedDate = new Date(featuredPost.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-
-                        featuredArticleContainer.innerHTML = `
-                            <img src="${heroImage}" alt="${heroTitle}" class="w-full h-full object-cover">
-                            <a href="view/readnews.html?id=${featuredPost.id}" class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end text-white">
-                                <div class="flex items-center space-x-2 text-sm font-medium mb-2">
-                                    <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">${heroCategory.toUpperCase()}</span>
-                                    <span>${publishedDate}</span>
-                                </div>
-                                <h3 class="text-2xl font-bold leading-tight">${heroTitle}</h3>
-                            </a>
-                        `;
-
-                        // Render the smaller top headlines
-                        topHeadlinesContainerSmall.innerHTML = '';
-                        posts.slice(1).forEach(post => {
-                            // Note: Using post.images[0].url for the image inside the small headline is questionable. 
-                            // It uses the post's main image, which is probably large. 
-                            // The placeholderAuthorImage is a better fit for the small image in the headline list, 
-                            // but for consistency with your original intent, I'll use the post's image if available.
-                            const postImage = post.images ? post.images[0].url : placeholderAuthorImage;
-                            const postAuthorName = post.author && post.author.displayName ? post.author.displayName : 'Admin';
-                            const postPublishedTime = post.published ? `${Math.floor((new Date() - new Date(post.published)) / 60000)} minutes ago` : '';
-
-                            const postElement = document.createElement('a');
-                            postElement.href = `view/readnews.html?id=${post.id}`;
-                            postElement.className = 'flex items-start space-x-3 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-100 transition-colors';
-                            postElement.innerHTML = `
-                                <img src="${postImage}" alt="${postAuthorName}" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex items-center space-x-1 text-sm text-gray-500 mb-1">
-                                        <img src="${post.author.image.url}" alt="${postAuthorName}" class="w-6 h-6 rounded-full">
-                                        <span class="font-semibold text-gray-800">${postAuthorName}</span>
-                                        <span class="text-xs">•</span>
-                                        <span class="text-xs">${postPublishedTime}</span>
-                                    </div>
-                                    <h4 class="font-bold text-base leading-tight hover:text-green-600">${post.title}</h4>
-                                    <p class="text-sm text-gray-600 leading-snug mt-1 hidden sm:block">${post.content.replace(/<[^>]*>?/gm, '').substring(0, 70)}...</p>
-                                </div>
-                            `;
-                            topHeadlinesContainerSmall.appendChild(postElement);
-                        });
-
-                    } else {
-                        featuredArticleContainer.innerHTML = '<p class="text-center p-6 text-gray-500">No news posts found.</p>';
-                        topHeadlinesContainerSmall.innerHTML = '<p class="text-center p-6 text-gray-500">No news posts found.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching blog posts:', error);
-                    featuredArticleContainer.innerHTML = '<p class="text-center p-6 text-red-500">Failed to load news.</p>';
-                    topHeadlinesContainerSmall.innerHTML = '<p class="text-center p-6 text-red-500">Failed to load news.</p>';
-                });
-        };
-        fetchTopNews();
-    });
     </script>
 </body>
 </html>
